@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/instance: test-app
   name: hello-service
   namespace: default
-  resourceVersion: "701855"
+  resourceVersion: "702895"
   uid: 567ba960-f453-46d6-bfa2-5d48db7d7909
 spec:
   allocateLoadBalancerNodePorts: true
