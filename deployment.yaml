@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-ui
+  template:
+    metadata:
+      labels:
+        app: hello-ui
+    spec:
+      imagePullSecrets:
+      - name: imagepull-docker
+      containers:
+      - name: hello-ui
+        image: ramakrishna8254/week:v1
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
